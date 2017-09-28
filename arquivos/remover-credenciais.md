@@ -10,8 +10,4 @@ Se usar o prompt de comando, o Windows salvará sua senha automaticamente. Para 
 
 Em seguida, remova as configurações globais do git:
 
-> Para remover o nome: 
-`git config --global --unset user.name`
-
-> Para remover o e-mail:
-`git config --global --unset user.email`
+> `git config --global --remove-section user`
