@@ -2,17 +2,16 @@ Removendo credenciais
 ---
 Se usar o prompt de comando, o Windows salvará sua senha automaticamente. Para apagar, vá até:
 
-> Acessar `Painel de Controle > Contas de Usuário > Gerenciador de Credenciais`
+> Acessar `Painel de Controle > Contas de Usuário e Segurança Familiar > Contas de Usuário`
 
-> Clicar em `Credenciais do Windows` e na lista de Credenciais Genéricas, clicar em `git:https://github.com` e depois em `Remover`
+> No menu à esquerda, clicar em `Gerenciar suas credenciais`
 
-Se usar o WSL Terminal:
+> Na lista de Credenciais Genéricas, clicar em `git:https://github.com` e depois em `Remover do Cofre`
 
-> Para salvar a senha por 1 hora, usar o comando: 
-`git config credential.helper "cache --timeout 3600"`
+Em seguida, remova as configurações globais do git:
 
-> Para remover: 
-`git credential-cache exit && rm -rf ~/.git-credential-cache`
+> Para remover o nome: 
+`git config --global --unset user.name`
 
-> Para remover todas as configurações globais:
-`git config --global --unset-all`
+> Para remover o e-mail:
+`git config --global --unset user.email`
